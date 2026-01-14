@@ -1,4 +1,4 @@
-package com.example.twoway_movie.service.movie;
+package com.example.twoway_movie.Service.movie;
 
 import com.example.twoway_movie.Entity.MovieEntity;
 import org.springframework.data.domain.Page;

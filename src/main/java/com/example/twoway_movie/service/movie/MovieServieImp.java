@@ -2,6 +2,7 @@ package com.example.twoway_movie.service.movie;
 
 import com.example.twoway_movie.Entity.MovieEntity;
 import com.example.twoway_movie.Repository.MovieRepository;
+import com.example.twoway_movie.Service.movie.MovieServie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -10,7 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class MovieServieImp implements  MovieServie{
+public class MovieServieImp implements MovieServie {
     @Autowired
     MovieRepository moviceRepository;
 
