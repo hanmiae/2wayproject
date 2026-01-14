@@ -1,7 +1,7 @@
 package com.example.twoway_movie.Controller;
 
 import com.example.twoway_movie.DTO.BoardDTO;
-import com.example.twoway_movie.Service.BoardService;
+import com.example.twoway_movie.Service.Impl.BoardService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -3,7 +3,6 @@ package com.example.twoway_movie.Service.Impl;
 import com.example.twoway_movie.DTO.BoardDTO;
 import com.example.twoway_movie.Entity.BoardEntity;
 import com.example.twoway_movie.Repository.BoardRepository;
-import com.example.twoway_movie.Service.BoardService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;

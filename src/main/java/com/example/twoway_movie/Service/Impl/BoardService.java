@@ -1,4 +1,4 @@
-package com.example.twoway_movie.Service;
+package com.example.twoway_movie.Service.Impl;
 
 import com.example.twoway_movie.DTO.BoardDTO;
 
