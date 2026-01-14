@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layouts/layout}">
@@ -9,5 +10,19 @@
 <div layout:fragment="content">
     <h1>임시 메인화면 입니다.</h1>
 </div>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TOWWAY MOVIE</title>
+</head>
+<body>
+
+<!-- 상단 메뉴만 유지 -->
+<div th:replace="top::menu"></div>
+
+<!-- 아무 콘텐츠도 없음 -->
+
+
 </body>
 </html>

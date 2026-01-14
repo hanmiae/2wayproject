@@ -12,6 +12,7 @@
 <body>
 
 <nav class="navbar navbar-inverse">
+
     <div class="container-fluid">
 
         <!-- 로고 -->
@@ -86,6 +87,44 @@
 
                 </ul>
             </li>
+
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">TOWWAY MOVIE</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">대시보드</a></li>
+
+      <!--영화관리-->
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">영화관리 <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/mv_inputgo">영화정보입력</a></li>
+          <li><a href="/mv_outgo">영화정보출력</a></li>
+        </ul>
+      </li>
+
+      <!--영화검색-->
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/mv_searchgo">영화검색 <span class="caret"></span></a>
+      </li>
+
+      <!--문의게시판-->
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">문의게시판 <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <!-- <li><a href="/board_inputgo">문의사항등록</a></li> -->
+            <li><a href="/board_outgo">1:1문의</a></li>
+        </ul>
+      </li>
+
+      <!--오시는 길-->
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/map_go">오시는 길 <span class="caret"></span></a>
+      </li>
+
+      <!--회원관리-->
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">회원관리 <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/member_inputgo">회원정보입력</a></li>
+          <li><a href="/member_outgo">회원정보출력</a></li>
+
         </ul>
 
         <!-- 오른쪽 로그인/로그아웃 -->
