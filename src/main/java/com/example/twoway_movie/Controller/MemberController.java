@@ -45,12 +45,13 @@ public class MemberController {
         if (bindingResult.hasErrors()) {
             return "member/memberinput";
         }
+        else {
+            // 에러 없으면: 저장 후 로그인 페이지로
+            log.info("에러가 없다!!");
+            memberService.memberinsert(memberDTO, response);
 
-        // 에러 없으면: 저장 후 로그인 페이지로
-        log.info("에러가 없다!!");
-        memberService.memberinsert(memberDTO, response);
-
-        return "redirect:/login";
+            return "redirect:/login";
+        }
     }
 
 

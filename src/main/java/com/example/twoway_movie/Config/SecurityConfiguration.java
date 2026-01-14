@@ -54,6 +54,7 @@ public class SecurityConfiguration {
                         .requestMatchers("/member_outgo").hasRole("ADMIN")
                         .requestMatchers("/member_searchgo", "/membersearch").hasRole("ADMIN")
                         .requestMatchers("/admin/**").hasRole("ADMIN")
+                        .requestMatchers("/mv_inputgo").hasRole("ADMIN")
 
                         // 그 외는 로그인 필요
                         .anyRequest().authenticated()
