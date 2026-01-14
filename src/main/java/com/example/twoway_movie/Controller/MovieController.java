@@ -2,7 +2,7 @@ package com.example.twoway_movie.Controller;
 
 import com.example.twoway_movie.DTO.MovieDTO;
 import com.example.twoway_movie.Entity.MovieEntity;
-import com.example.twoway_movie.service.movie.MovieServie;
+import com.example.twoway_movie.Service.movie.MovieServie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
@@ -20,7 +20,7 @@ import java.util.UUID;
 @Controller
 public class MovieController {
 
-    String path = "C:\\sundo\\springboot\\twoway_movie\\src\\main\\resources\\static\\image";
+    String path = "C:\\2way\\twoway_movie\\src\\main\\resources\\static\\image";
 
     @Autowired
     MovieServie movieServie;

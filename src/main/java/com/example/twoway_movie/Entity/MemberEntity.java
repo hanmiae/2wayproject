@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
         name = "member",
         sequenceName = "member_seq",
         allocationSize = 1,
-        initialValue = 1002
+        initialValue = 1000
 )
 public class MemberEntity {
     @Id

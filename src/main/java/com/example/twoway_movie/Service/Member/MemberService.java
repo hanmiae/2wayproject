@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
 public interface MemberService {
-    void memberinsert(MemberDTO memberDTO, HttpServletResponse response);
+    void memberinsert(MemberDTO memberDTO);
 
     Page<MemberEntity> entitypage(int page);
 

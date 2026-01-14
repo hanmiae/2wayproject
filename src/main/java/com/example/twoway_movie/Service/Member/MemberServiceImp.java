@@ -19,7 +19,7 @@ public class MemberServiceImp implements MemberService {
    //암호화 과정남아있음
    private final BCryptPasswordEncoder bCryptPasswordEncoder;
     @Override
-    public void memberinsert(MemberDTO memberDTO, HttpServletResponse response) {
+    public void memberinsert(MemberDTO memberDTO) {
         if(memberRepository.existsByUserid(memberDTO.getUserid())){
 
         }

@@ -37,22 +37,24 @@ public class MemberController {
     }
 
     @PostMapping("/memberinputsave")
-    public String member2(@ModelAttribute("memberDTO") @Valid MemberDTO memberDTO,
-                          BindingResult bindingResult,
-                          HttpServletResponse response) {
+    public String member2(@Valid @ModelAttribute("memberDTO") MemberDTO memberDTO,
+                          BindingResult bindingResult) {
 
-        // 유효성 에러 있으면: 입력폼으로 다시
         if (bindingResult.hasErrors()) {
+            bindingResult.getFieldErrors().forEach(e ->
+                    log.info("VALIDATION ERROR field={} msg={} value={}",
+                            e.getField(), e.getDefaultMessage(), e.getRejectedValue())
+            );
             return "member/memberinput";
         }
-        else {
-            // 에러 없으면: 저장 후 로그인 페이지로
-            log.info("에러가 없다!!");
-            memberService.memberinsert(memberDTO, response);
 
-            return "redirect:/login";
-        }
+        log.info("VALIDATION OK -> 저장 시도");
+        memberService.memberinsert(memberDTO);
+        return "redirect:/login";
     }
+
+
+
 
 
     @GetMapping("/admin/item")
