@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+<head>
+
+  <style>
+    ul {
+        text-align:center;
+        margin-top: 20px;
+    }
+
+    ul li {
+        list-style-type: none;
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .pagination{
+        margin : 0 auto;
+        width:100%;
+    }
+
+    div.pp{
+        color: blue;
+    }
+  </style>
+
+</head>
+<body>
+<div layout:fragment="content">
+
+
+  <div class="container">
+    <h2 th:text="${'주차입출차출력'}"></h2>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>차량번호</th>
+        <th>입차시간</th>
+        <th>출차시간</th>
+        <th>주차시간(시/분)</th>
+        <th>주차요금</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="emp:${list}">
+        <td th:text="${emp.carnum}"></td>
+        <td th:text="${emp.inpark}"></td>
+        <td th:text="${emp.outpark}"></td>
+        <td th:text="${emp.parktime}"></td>
+        <td th:text="${#numbers.formatInteger(emp.parkpay,1,'COMMA')+'원'}"></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="pagination ">
+    <ul>
+      <li th:each="page, stat : ${#numbers.sequence(0, totalPage - 1)}">
+
+  <span th:if="${nowpage == stat.index + 1}" >
+    <a th:href="@{/parkout(page=${stat.index})}"
+       th:text="${stat.index + 1}" style="color:red" ></a>
+  </span>
+
+        <span th:if="${nowpage != stat.index + 1}">
+    <a th:href="@{/parkout(page=${stat.index})}"
+       th:text="${stat.index + 1}"></a>
+  </span>
+
+      </li>
+
+    </ul>
+  </div>
+
+
+</div>
+</body>
+</html>
